@@ -7,8 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('input change', quantity.value);
     plurals.forEach(function(plural) {
       console.log(plural.nextElementSibling.getAttribute('data-single'));
-      if (quantity.value === 1) {
-
+      if (quantity.value == 1) {
+        console.table(plural.nextElementSibling)
+        plural.value = plural.getAttribute('data-single');
+        plural.nextElementSibling.innerText = plural.nextElementSibling.getAttribute('data-single');
+      } else {
+        plural.value = plural.getAttribute('data-other');
+        plural.nextElementSibling.innerText = plural.nextElementSibling.getAttribute('data-other')
       };
       });
   });
@@ -17,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // create delete recipe button that blooters the recipe child items
   const newButton = document.createElement("button");
   newButton.innerHTML = "Delete Recipe";
+  newButton.className = "delete-button";
   document.body.appendChild(newButton);
   newButton.addEventListener ("click", function() {
     const myNode = document.querySelector("#recipe-list");

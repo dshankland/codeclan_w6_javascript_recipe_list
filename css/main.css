@@ -1,0 +1,38 @@
+:root {
+  --my-font-family-1: "Caveat";
+  --my-font-family-2: cursive;
+}
+html {
+  background: url('../images/recipebackground.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  font-family: var(--my-font-family-1), var(--my-font-family-2);
+  font-size: 1.5em;
+  margin-left: 50px
+}
+
+.add-button, .delete-button {
+  text-align: center;
+  padding: 2px 2px;
+  margin: 0px;
+  height: 1.4em;
+  width: 6em;
+  font-size: 1em;
+  border: 1px solid Black;
+  font-family: var(--my-font-family-1), var(--my-font-family-2);
+}
+
+input, select {
+    font-family: var(--my-font-family-1), var(--my-font-family-2);
+    font-size: 1em;
+}
+
+#new-item-form {
+  font-family: var(--my-font-family-1), var(--my-font-family-2);
+
+}
