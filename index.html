@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Recipe</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <form id="new-item-form">
+      <div id="form-wrapper">
+        <div class="form-item">
+          <label for="ingredient" class="primary">Grocery Item</label>
+          <input type="text" id="ingredient" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="quantity" class="primary">Quantity</label>
+          <input id="quantity" type="number" name="quantity" min="1" required>
+        </div>
+
+        <div class="form-item">
+          <input id="pinch" class="plurals" type="radio" name="measurement" data-single="pinch" data-other="pinches" value="pinches">
+          <label for="pinch" data-single="Pinch" data-other="Pinches">Pinches</label>
+          <input id="teaspoon" class="plurals" type="radio" name="measurement" data-single="teaspoon" data-other="teaspoons" value="teaspoons">
+          <label data-single="Teaspoon" data-other="Teaspoons" for="teaspoon">Teaspoons</label>
+          <input id="dessertspoon" class="plurals" type="radio" name="measurement" data-single="teaspoon" data-other="teaspoons" value="dessertspoons">
+          <label data-single="Dessertspoon" data-other="Dessertpoons" for="dessertspoon">Dessertspoons</label>
+          <input id="gram" class="plurals" type="radio" name="measurement" data-single="gram" data-other="grams" value="grams">
+          <label data-single="Gram" data-other="Grams" for="gram">Grams</label>
+          <input id="item" class="plurals" type="radio" name="measurement" data-single="" data-other="" value="" selected>
+          <label data-single="Item" data-other="Items" for="item">Items</label>
+        </div>
+
+        <div class="form-item">
+           <select name="preparation" required>
+            <option value="finely chopped">Finely Chopped</option>
+            <option value="chopped">Chopped</option>
+            <option value="sliced">Sliced</option>
+            <option value="as it comes">As it comes</option>
+          </select>
+        </div>
+
+      </div>
+      <input type="submit" value="add to list"/>
+    </form>
+
+    <!-- <button id="delete-all">Delete All</button> -->
+    <h1>Recipe</h1>
+    <div id="recipe-list-div">
+      <ul id="recipe-list">
+      </ul>
+    </div>
+  </body>
+</html>
