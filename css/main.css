@@ -3,7 +3,7 @@
   --my-font-family-2: cursive;
 }
 html {
-  background: url('../images/recipebackground.jpg') no-repeat center center fixed;
+  background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('../images/recipebackground.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -34,5 +34,4 @@ input, select {
 
 #new-item-form {
   font-family: var(--my-font-family-1), var(--my-font-family-2);
-
 }
